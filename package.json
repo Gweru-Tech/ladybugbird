@@ -1,0 +1,36 @@
+{
+  "name": "ladybird-api-v5",
+  "version": "5.0.0",
+  "description": "Comprehensive API hub with 100+ APIs including Anime, AI, YouTube, Spotify, and more",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "tailwindcss -i src/input.css -o dist/output.css",
+    "build:js": "webpack --mode production",
+    "serve": "node server.js"
+  },
+  "keywords": ["api", "anime", "ai", "youtube", "spotify", "tools", "ecocash"],
+  "author": "Ladybird API Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.6.2",
+    "helmet": "^7.1.0",
+    "dotenv": "^16.3.1",
+    "compression": "^1.7.4",
+    "express-rate-limit": "^7.1.5",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "tailwindcss": "^3.3.6",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

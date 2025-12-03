@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladybird API v5 - 150+ APIs Hub</title>
+    <meta name="description" content="Comprehensive API hub with 150+ APIs including Anime, AI, YouTube, Spotify, Tools, Entertainment, and more. Version 5.">
+    <meta name="keywords" content="API, Anime, AI, YouTube, Spotify, Tools, Entertainment, Development">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-bug text-purple-600 text-2xl mr-3"></i>
+                    <span class="font-bold text-xl">Ladybird API v5</span>
+                    <span class="ml-2 px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">150+ APIs</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="toggleDarkMode()" class="p-2 rounded-lg hover:bg-gray-100">
+                        <i class="fas fa-moon text-gray-600"></i>
+                    </button>
+                    <button onclick="showDonations()" class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">
+                        <i class="fas fa-donate mr-2"></i>Donate
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content max-w-7xl mx-auto px-4 text-center">
+            <h1 class="hero-title animate-float">Welcome to Ladybird API v5</h1>
+            <p class="hero-subtitle">Your comprehensive hub for 150+ APIs including Anime, AI, YouTube, Spotify, Tools, Entertainment, and much more!</p>
+            <div class="flex justify-center space-x-4">
+                <button onclick="exploreAPIs()" class="px-8 py-3 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 btn">
+                    <i class="fas fa-rocket mr-2"></i>Explore APIs
+                </button>
+                <button onclick="viewDocumentation()" class="px-8 py-3 bg-transparent border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-purple-600 btn">
+                    <i class="fas fa-book mr-2"></i>Documentation
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="stat-card">
+                    <div class="stat-number text-purple-600">150+</div>
+                    <div class="stat-label">Total APIs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number text-blue-600">15</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number text-green-600">5.0</div>
+                    <div class="stat-label">Version</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number text-red-600">24/7</div>
+                    <div class="stat-label">Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Categories -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">API Categories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Anime APIs -->
+                <div class="api-category-card">
+                    <div class="flex items-center mb-4">
+                        <div class="api-category-icon bg-purple-100 text-purple-600">
+                            <i class="fas fa-dragon"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Anime APIs</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Access quotes, characters, seasonal anime, manga, and more.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="badge badge-primary">15+ APIs</span>
+                        <span class="badge badge-success">Free</span>
+                    </div>
+                    <button onclick="showCategoryAPIs('anime')" class="btn btn-primary w-full">
+                        Explore Anime APIs
+                    </button>
+                </div>
+
+                <!-- AI APIs -->
+                <div class="api-category-card">
+                    <div class="flex items-center mb-4">
+                        <div class="api-category-icon bg-blue-100 text-blue-600">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">AI APIs</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">ChatGPT, image generation, text analysis, translation, NLP tools.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="badge badge-primary">20+ APIs</span>
+                        <span class="badge badge-warning">Premium</span>
+                    </div>
+                    <button onclick="showCategoryAPIs('ai')" class="btn btn-primary w-full">
+                        Explore AI APIs
+                    </button>
+                </div>
+
+                <!-- YouTube APIs -->
+                <div class="api-category-card">
+                    <div class="flex items-center mb-4">
+                        <div class="api-category-icon bg-red-100 text-red-600">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">YouTube APIs</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Trending videos, search, analytics, comments, transcripts, more.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="badge badge-primary">12+ APIs</span>
+                        <span class="badge badge-success">Free</span>
+                    </div>
+                    <button onclick="showCategoryAPIs('youtube')" class="btn btn-primary w-full">
+                        Explore YouTube APIs
+                    </button>
+                </div>
+
+                <!-- Spotify APIs -->
+                <div class="api-category-card">
+                    <div class="flex items-center mb-4">
+                        <div class="api-category-icon bg-green-100 text-green-600">
+                            <i class="fab fa-spotify"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Spotify APIs</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Search tracks, playlists, albums, artists, audio features.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="badge badge-primary">10+ APIs</span>
+                        <span class="badge badge-info">Freemium</span>
+                    </div>
+                    <button onclick="showCategoryAPIs('spotify')" class="btn btn-primary w-full">
+                        Explore Spotify APIs
+                    </button>
+                </div>
+
+                <!-- Tools APIs -->
+                <div class="api-category-card">
+                    <div class="flex items-center mb-4">
+                        <div class="api-category-icon bg-orange-100 text-orange-600">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Tools APIs</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">QR codes, URL shortener, weather, validators, converters, more.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="badge badge-primary">25+ APIs</span>
+                        <span class="badge badge-success">Free</span>
+                    </div>
+                    <button onclick="showCategoryAPIs('tools')" class="btn btn-primary w-full">
+                        Explore Tools APIs
+                    </button>
+                </div>
+
+                <!-- Entertainment APIs -->
+                <div class="api-category-card">
+                    <div class="flex items-center mb-4">
+                        <div class="api-category-icon bg-pink-100 text-pink-600">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Entertainment APIs</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Movies, TV shows, games, books, comics, streaming data.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="badge badge-primary">15+ APIs</span>
+                        <span class="badge badge-warning">Premium</span>
+                    </div>
+                    <button onclick="showCategoryAPIs('entertainment')" class="btn btn-primary w-full">
+                        Explore Entertainment APIs
+                    </button>
+                </div>
+
+                <!-- Social Media APIs -->
+                <div class="api-category-card">
+                    <div class="flex items-center mb-4">
+                        <div class="api-category-icon bg-indigo-100 text-indigo-600">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Social Media APIs</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Twitter, Instagram, Facebook, LinkedIn, Reddit, TikTok.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="badge badge-primary">12+ APIs</span>
+                        <span class="badge badge-info">Freemium</span>
+                    </div>
+                    <button onclick="showCategoryAPIs('social')" class="btn btn-primary w-full">
+                        Explore Social APIs
+                    </button>
+                </div>
+
+                <!-- Weather APIs -->
+                <div class="api-category-card">
+                    <div class="flex items-center mb-4">
+                        <div class="api-category-icon bg-cyan-100 text-cyan-600">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Weather APIs</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Current weather, forecasts, maps, air quality, alerts.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="badge badge-primary">15+ APIs</span>
+                        <span class="badge badge-success">Free</span>
+                    </div>
+                    <button onclick="showCategoryAPIs('weather')" class="btn btn-primary w-full">
+                        Explore Weather APIs
+                    </button>
+                </div>
+
+                <!-- Finance APIs -->
+                <div class="api-category-card">
+                    <div class="flex items-center mb-4">
+                        <div class="api-category-icon bg-emerald-100 text-emerald-600">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Finance APIs</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Crypto prices, stocks, forex, market data, portfolios.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="badge badge-primary">10+ APIs</span>
+                        <span class="badge badge-warning">Premium</span>
+                    </div>
+                    <button onclick="showCategoryAPIs('finance')" class="btn btn-primary w-full">
+                        Explore Finance APIs
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="donation-section">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Support Ladybird API v5</h2>
+            <p class="text-lg mb-8">
+                Help us keep 150+ APIs running and add more features. Your support means everything!
+            </p>
+            <div class="donation-card">
+                <div class="flex items-center justify-center mb-6">
+                    <i class="fas fa-mobile-alt text-4xl mr-4"></i>
+                    <div class="text-left">
+                        <div class="text-sm">Ecocash Number</div>
+                        <div class="text-2xl font-bold">+263 777 124 998</div>
+                    </div>
+                </div>
+                <button onclick="processDonation()" class="btn btn-success text-lg">
+                    <i class="fas fa-heart mr-2"></i>Donate Now
+                </button>
+                <div class="grid grid-cols-3 gap-4 mt-6">
+                    <div class="donation-tier">
+                        <i class="fas fa-coffee text-2xl mb-2"></i>
+                        <div class="font-semibold">$5</div>
+                        <div class="text-sm">Coffee Support</div>
+                    </div>
+                    <div class="donation-tier">
+                        <i class="fas fa-star text-2xl mb-2"></i>
+                        <div class="font-semibold">$25</div>
+                        <div class="text-sm">Premium Access</div>
+                    </div>
+                    <div class="donation-tier">
+                        <i class="fas fa-crown text-2xl mb-2"></i>
+                        <div class="font-semibold">$100</div>
+                        <div class="text-sm">VIP Sponsor</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="footer-brand">
+                        <i class="fas fa-bug text-purple-400 text-xl mr-2"></i>
+                        <span class="font-bold text-lg">Ladybird API v5</span>
+                    </div>
+                    <p class="text-gray-400">Your comprehensive API hub with 150+ endpoints.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="footer-links space-y-2 text-gray-400">
+                        <li><a href="#" onclick="showDocumentation()" class="hover:text-white">Documentation</a></li>
+                        <li><a href="#" onclick="showAPIKeys()" class="hover:text-white">API Keys</a></li>
+                        <li><a href="#" onclick="showPricing()" class="hover:text-white">Pricing</a></li>
+                        <li><a href="#" onclick="showSupport()" class="hover:text-white">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Categories</h4>
+                    <ul class="footer-links space-y-2 text-gray-400">
+                        <li><a href="#" onclick="showCategoryAPIs('anime')" class="hover:text-white">Anime APIs</a></li>
+                        <li><a href="#" onclick="showCategoryAPIs('ai')" class="hover:text-white">AI APIs</a></li>
+                        <li><a href="#" onclick="showCategoryAPIs('tools')" class="hover:text-white">Tools APIs</a></li>
+                        <li><a href="#" onclick="showAllAPIs()" class="hover:text-white">All APIs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="footer-social">
+                        <a href="#" class="hover:text-white"><i class="fab fa-github"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Ladybird API v5. All rights reserved. Version 5.0.0</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- API Modal -->
+    <div id="apiModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle" class="text-2xl font-bold"></h3>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="modalContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="/js/script.js"></script>
+</body>
+</html>
